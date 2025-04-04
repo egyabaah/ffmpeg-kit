@@ -136,4 +136,9 @@ dependencies {
   api 'com.facebook.react:react-native:+'
   // will result in something like: implementation 'com.local.ffmpeg-kit:audio_binary:6.0-2'
   implementation 'com.local.ffmpeg-kit:' + safePackageName(safeExtGet('ffmpegKitPackage', 'https')) + '_binary:' + safePackageVersion(safeExtGet('ffmpegKitPackage', 'https'))
+  // Required: Place smart-exception-java-0.2.1.jar in android/app/repo/smart-exception-java-0.2.1.jar
+  implementation files("${rootProject.project(':app').projectDir}/repo/smart-exception-java-0.2.1.jar")
+  // Required: Place smart-exception-common-0.2.1.jar in android/app/repo/smart-exception-common-0.2.1.jar
+  implementation files("${rootProject.project(':app').projectDir}/repo/smart-exception-common-0.2.1.jar")
+  
 }
