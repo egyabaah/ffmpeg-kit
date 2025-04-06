@@ -14,9 +14,9 @@ Pod::Spec.new do |s|
   s.requires_arc      = true
   s.static_framework  = true
 
-  s.source       = { :git => "https://github.com/egyabaah/ffmpeg-kit.git", :tag => "react.native.v#{s.version}" }
+  s.source       = { :git => "https://github.com/arthenica/ffmpeg-kit.git", :tag => "react.native.v#{s.version}" }
 
-  s.default_subspec   = 'https'
+  s.default_subspec   = 'audio-lts'
 
   s.dependency "React-Core"
 
@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   s.subspec 'audio' do |ss|
       ss.source_files      = '**/FFmpegKitReactNativeModule.m',
                              '**/FFmpegKitReactNativeModule.h'
-      ss.resource = 'https://github.com/egyabaah/ffmpeg-kit/releases/download/react-native.v6.0.2/ffmpeg-kit-audio-6.0-ios-xcframework.zip'
+      ss.dependency 'ffmpeg-kit-ios-audio', "6.0"
       ss.ios.deployment_target = '12.1'
   end
 
